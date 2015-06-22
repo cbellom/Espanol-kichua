@@ -4891,7 +4891,7 @@ body.custom-background {
     /* lang = 'es' */
     /* explicit FieldWorks style = 'Dictionary-Headword' */
     font-family: "Times New Roman", serif;	/* default Serif font */
-    font-size: 10pt;	/* cascaded environment */
+    font-size: 20pt;	/* cascaded environment */
     font-weight: bold;
     text-indent: 0pt;
     margin-left: 0pt;

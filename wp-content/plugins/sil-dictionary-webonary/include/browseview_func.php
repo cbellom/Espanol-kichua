@@ -495,7 +495,14 @@ function vernacularalphabet_func( $atts )
 		}
 		else if(trim($mypost->post_title) == trim($mypost->search_strings) )
 		{
-			$display .= "<div class=post>" . $mypost->post_content . "</div>";
+			$content = $mypost->post_content;
+			$content = apply_filters('the_content', $content);
+			$content = str_replace(']]>', ']]&gt;', $content);
+			$morestring = '<!--more';
+			$explodemore = explode($morestring, $content);
+			
+			$display .= "<div class=post>" . $explodemore[0]. "</div>" . '<a class="read-more" href="' . get_permalink( $mypost->ID ) . '">' . __( 'Leer mas', '' ) . '</a>'." ";		
+			$display .= "<br/>";
 			/*
 			if( comments_open($mypost->ID) ) {
 				$display .= "<a href=\"/" . $mypost->post_name. "\" rel=bookmark><u>Comments (" . get_comments_number($mypost->ID) . ")</u></a>";
