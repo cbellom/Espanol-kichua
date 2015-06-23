@@ -106,7 +106,7 @@ endif; ?>
 
 					if(isset($zerif_logo) && $zerif_logo != ""):
 
-						echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
+						echo '<a href="http://localhost/wordpress/" class="navbar-brand">';
 
 							echo '<img src="'.$zerif_logo.'" alt="'.get_bloginfo('title').'">';
 
