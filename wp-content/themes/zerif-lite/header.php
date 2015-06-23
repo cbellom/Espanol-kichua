@@ -114,7 +114,7 @@ endif; ?>
 
 					else:
 
-						echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
+						echo '<a href="http://localhost/wordpress/" class="navbar-brand">';
 						
 							if( file_exists(get_stylesheet_directory()."/images/logo.png")):
 							
