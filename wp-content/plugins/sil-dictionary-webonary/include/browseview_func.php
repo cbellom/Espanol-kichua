@@ -501,8 +501,10 @@ function vernacularalphabet_func( $atts )
 			$morestring = '<!--more';
 			$explodemore = explode($morestring, $content);
 			
-			$display .= "<div class=post>" . $explodemore[0]. "</div>" . '<a class="read-more" href="' . get_permalink( $mypost->ID ) . '">' . __( 'Leer mas', '' ) . '</a>'." ";		
-			$display .= "<br/>";
+			$display .= "<div class=post>" . $explodemore[0]. "</div>" ;
+			if($explodemore[1] != null)	{					
+				$display .= '<a class="read-more" href="' . get_permalink( $mypost->ID ) . '">' . __( 'Leer mas', '' ) . '</a>'." ";					
+			}	
 			/*
 			if( comments_open($mypost->ID) ) {
 				$display .= "<a href=\"/" . $mypost->post_name. "\" rel=bookmark><u>Comments (" . get_comments_number($mypost->ID) . ")</u></a>";
