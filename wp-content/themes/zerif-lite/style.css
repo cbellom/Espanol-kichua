@@ -1631,6 +1631,7 @@ ul.nav > li.current_page_item.current > a:before {
 	text-transform: uppercase;
 	font-size: 55px;
 	float:none;
+	background-color: purple;
 }
 /* Short Messages */
 .bottom-message-section {
