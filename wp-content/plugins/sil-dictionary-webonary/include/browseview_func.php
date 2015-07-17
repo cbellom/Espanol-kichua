@@ -112,14 +112,14 @@ function displayAlphabet($alphas, $languagecode)
 {
 ?>
 	<style type="text/css">
-	.lpTitleLetterCell {min-width:31px; height: 23x; padding-top: 3px; padding-bottom: 2px; text-bottom; text-align:center;background-color: #EEEEEE;cursor:pointer;cursor:hand;border:1px solid silver; float:left; position: relative;}
+	.lpTitleLetterCell {min-width:31px; height: 23x; padding-top: 3px; padding-bottom: 2px; text-bottom; text-align:center;background-color: #8f86d1;cursor:pointer;cursor:hand;border:1px solid #800080; float:left; position: relative;}
 	</style>
 <?php
 	$display = "<br>";
 	$display .= "<div style=\"text-align:center;\"><div style=\"display:inline-block;\">";
 	foreach($alphas as $letter)
 	{
-    	$display .= "<div class=\"lpTitleLetterCell\"><span class=lpTitleLetter><a href=\"?letter=" . stripslashes($letter) . "&key=" . $languagecode . "\">" . stripslashes($letter) . "</a></span></div>";
+    	$display .= "<div class=\"lpTitleLetterCell\"><span class=lpTitleLetter><a class = \"a-dic\" href=\"?letter=" . stripslashes($letter) . "&key=" . $languagecode . "\">" . stripslashes($letter) . "</a></span></div>";
 	}
 	$display .= "</div></div>";
 	$display .=  "<div style=clear:both></div>";
