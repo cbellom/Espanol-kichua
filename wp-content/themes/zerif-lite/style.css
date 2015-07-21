@@ -301,6 +301,10 @@ h6 {
 .red-btn {
 	background: #e96656;
 }
+.purple-btn {
+	background: #4a095c;
+	color: #e5c507;
+}
 .green-btn {
 	background: #20AA73;
 }
@@ -318,6 +322,10 @@ h6 {
 .blue-btn:hover {
 	color: #FFF;
 	background: #1288b9;
+}
+.purple-btn:hover {
+	color: #4a095c;
+	background: #e5c507;
 }
 .red-btn:hover {
 	color: #FFF;
@@ -441,7 +449,7 @@ thead th{
 	color: #f7d861;
 }
 .dark-text {
-	color: #404040;
+	color: #800080;
 }
 .white-text {
 	color: #FFFFFF;
@@ -589,7 +597,7 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	color: #555;
+	color: #800080;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 0;
 }
@@ -599,7 +607,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-	color: #111;
+	color: #800080;
 }
 input[type="text"],
 input[type="email"],
@@ -886,7 +894,7 @@ a:active {
 	margin: auto;
 	z-index: 1;
 	content: "";
-	width: 50%;
+	width: 35%;
 	height: 2px;
 	background: #e96656;
 	bottom: -9px;
@@ -1358,6 +1366,18 @@ object {
 	margin-top: 15px;
 	margin-bottom: 0;
 }
+
+.section-header-contact-us h2 {
+	padding: 30px;
+	line-height: 40px;
+	position: relative;
+	display: inline-block;
+	font-size: 45px;
+	text-transform: uppercase;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	background-color: rgba(62,7,69,0.6);
+}
 .section-header h6 {
 	font-size: 16px;
 	margin-bottom: 0;
@@ -1463,7 +1483,7 @@ object {
 	margin-right: 0 !important;
 }
 .navbar-inverse .navbar-nav>li>a {
-	color: #404040;
+	color: #800080;
 	padding: 0;
 	line-height: 35px;
 }
@@ -1503,7 +1523,7 @@ object {
 	padding:10px;
 }
 .navbar-inverse .navbar-nav ul.sub-menu li a {
-	color:#404040;
+	color:#800080;
 }
 .navbar-inverse .navbar-nav ul.sub-menu li:hover > a {
 	color:#e96656;
@@ -1645,7 +1665,9 @@ ul.nav > li.current_page_item.current > a:before {
 	text-transform: uppercase;
 	font-size: 55px;
 	float:none;
-	background-color: purple;
+	background-color: rgba(62,7,69,0.6);
+	padding-bottom: 20px;
+	padding-top: 20px;
 }
 /* Short Messages */
 .bottom-message-section {
@@ -1757,7 +1779,7 @@ ul.nav > li.current_page_item.current > a:before {
 .focus {
 	padding-bottom: 100px;
 	overflow: hidden;
-	background: #FFFFFF;
+	background: #e6e7e8;
 
 }
 .focus .row {
@@ -1815,7 +1837,7 @@ ul.nav > li.current_page_item.current > a:before {
 }
 .focus-box h5 {
 	margin-bottom: 15px;
-	color: #404040;
+	color: #800080;
 	position: relative;
 	display: inline-block;
 	text-transform: uppercase;
@@ -2056,7 +2078,7 @@ width: -webkit-calc(100% / 4);
  **   Section: Abot us;              -----
 -----------------------------------------*/
 .about-us {
-	background: #272727;
+	background: #e5c507;
 	color: #FFF;
 	padding-bottom: 100px;
 }
@@ -2070,13 +2092,14 @@ width: -webkit-calc(100% / 4);
 	font-size: 60px;
 	line-height: normal;
 	margin-top: -15px;
+	color: #800080;
 }
 .about-us .section-header h6 {
-	color: #FFF;
+	color: #800080;
 }
 .about-us p {
 	text-align: left;
-	color: #939393;
+	color: #6d6e71;
 	font-size: 14px;
 	line-height: 25px;
 }
@@ -2116,6 +2139,7 @@ width: -webkit-calc(100% / 4);
 	float: none;
 	margin-top: 0;
 	margin-bottom: 0;
+	color: #800080;
 }
 .skills .skill p {
 	line-height: 20px;
@@ -2235,7 +2259,7 @@ width: -webkit-calc(100% / 4);
 .our-team {
 	padding-bottom: 66px;
 	padding-top: 100px;
-	background: #FFFFFF;
+	background: #e6e7e8;
 }
 .team-member {
 	border-radius: 4px;
@@ -2299,13 +2323,14 @@ width: -webkit-calc(100% / 4);
 }
 .team-member h5 {
 	text-transform: uppercase;
-	color: #404040;
+	color: #800080;
 	font-weight: 700;
 	position: relative;
 	margin-top: 15px;
 }
 .team-member .position {
 	font-size: 13px;
+	color: #800080;
 }
 .team-member .social-icons {
 	margin-bottom: 25px;
@@ -2748,7 +2773,6 @@ width: -webkit-calc(100% / 4);
  **   Contact us             -----
 -----------------------------------------*/
 .contact-us {
-	background: rgba(0, 0, 0, 0.5);
 	padding-bottom: 95px;
 }
 .contact-us .section-header h6 {
@@ -4578,6 +4602,11 @@ body.custom-background {
     .section-header {
         padding-bottom: 30px;
     }
+
+	.section-header-contact-us {
+        padding-bottom: 30px;
+    }
+	
     .focus, .works, .about-us, .features, .packages, .products, .testimonial, .contact-us {
         padding-top: 60px;
         padding-bottom: 60px;
