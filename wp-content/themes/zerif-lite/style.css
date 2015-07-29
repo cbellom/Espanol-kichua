@@ -4957,6 +4957,7 @@ body.custom-background {
     text-indent: 0pt;
     margin-left: 0pt;
     string-set: guideword content();
+	color: #800080;
 }
 .headword>.xitem + .xitem:before { content: " " }
 .partofspeech {
