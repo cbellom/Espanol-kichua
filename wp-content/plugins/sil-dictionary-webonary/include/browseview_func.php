@@ -84,7 +84,7 @@ function categories_func( $atts )
 	{
 		if(strlen(trim($_REQUEST["semdomain"])) > 0)
 		{
-			$display .= __('No entries exist for', 'sil_dictionary') . ' "' . $_REQUEST["semdomain"] . '"';
+			$display .= __('No se encuentran palabras para ', 'sil_dictionary') . ' "' . $_REQUEST["semdomain"] . '"';
 		}
 	}
 	else
@@ -472,7 +472,7 @@ function vernacularalphabet_func( $atts )
 	
 	if(count($arrPosts) == 0)
 	{
-		$display .= __('No entries exist starting with this letter.', 'sil_dictionary');
+		$display .= __('No se encuentran palabras que empiecen con esta letra.', 'sil_dictionary');
 	}
 	$displaySubentriesAsMinorEntries = true;
 	if(get_option('DisplaySubentriesAsMainEntries') == 'no')
