@@ -27,12 +27,7 @@ get_header(); ?>
 <div class="container">
 
 
-
-<div class="content-left-wrap col-md-9">
-
-
-
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area" style="margin-top:60px;">
 
 		<main id="main" class="site-main" role="main">
 
@@ -44,10 +39,21 @@ get_header(); ?>
 
 			<header class="page-header">
 
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'zerif-lite' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="page-title"><?php printf( __( 'Resultados para: %s', 'zerif-lite' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 
 			</header><!-- .page-header -->
+			
+			
+			<?php
+				echo "<p id=search-2 class=widget widget_search>";
+				if(function_exists('webonary_searchform')) { webonary_searchform(); }
+				echo "</p>";
 
+				//if(is_page() && is_active_sidebar('sidebar-pages')) : dynamic_sidebar('sidebar-pages');
+				if(is_active_sidebar('sidebar-pages')) : dynamic_sidebar('sidebar-pages');
+				//elseif(is_active_sidebar('sidebar-blog')) : dynamic_sidebar('sidebar-blog');
+				endif; 
+			?>
 
 
 			<?php /* Start the Loop */ ?>
@@ -83,19 +89,6 @@ get_header(); ?>
 		</main><!-- #main -->
 
 	</div><!-- #primary -->
-
-
-
-</div><!-- .content-left-wrap -->
-
-
-
-<div class="sidebar-wrap col-md-3 content-left-wrap">
-
-	<?php get_sidebar(); ?>
-
-</div><!-- .sidebar-wrap -->
-
 
 
 </div><!-- .container -->

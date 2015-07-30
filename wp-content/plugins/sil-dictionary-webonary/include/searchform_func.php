@@ -17,7 +17,7 @@ function webonary_searchform() {
 			<div class="normalSearch">
 				<!-- Search Bar Popups --> <?php !dynamic_sidebar( 'topsearchbar' ); ?><!-- end Search Bar Popups -->
 				<!-- search text box -->
-				<input type="text" name="s" id="s" value="<?php the_search_query(); ?>" size=40>
+				<input type="text" name="s" id="s" value="<?php the_search_query(); ?>" size=40 placeholder="Buscar...">
 	
 				<!-- I'm not sure why qtrans_getLanguage() is here. It doesn't seem to do anything. -->
 				<?php if (function_exists('qtrans_getLanguage')) {?>
@@ -25,7 +25,7 @@ function webonary_searchform() {
 				<?php }?>
 	
 				<!-- search button -->
-				<input type="submit" id="searchsubmit" name="search" value="<?php _e('Search', 'sil_dictionary'); ?>" />
+				<input class="searchbutton" type="submit" id="searchsubmit" name="search" value="<?php _e('Buscar', 'sil_dictionary'); ?>" />
 				<br>
 				<?php
 				$key = $_POST['key'];
@@ -35,46 +35,12 @@ function webonary_searchform() {
 				}
 	
 				$catalog_terms = get_terms('sil_writing_systems');
-	
-				/*
-				 * Set up language options. The first option is for all
-				 * languages. Then the list is retrieved.
-				 */
-				if ($catalog_terms) {
-					?>
-					<!-- If you need to control the width of the dropdown, use the
-					class webonary_searchform_language_select in your theme .css -->
-					<select name="key" class="webonary_searchform_language_select">
-					<option value="">
-						<?php _e('All Languages','sil_dictionary'); ?>
-					</option>
-					<?php
-					foreach ($catalog_terms as $catalog_term)
-					{ ?>
-						<option value="<?php echo $catalog_term->slug; ?>"
-							<?php if($key == $catalog_term->slug) {?>selected<?php }?>>
-							<?php echo $catalog_term->name; ?>
-						</option>
-						<?php
-					}
-					?>
-					</select>
-					<br>
-					<?php
-				}
-	
+					
 				/*
 				 * Set up the Parts of Speech
 				 */
 				$parts_of_speech = get_terms('sil_parts_of_speech');
 				
-				if($parts_of_speech)
-				{
-					wp_dropdown_categories("show_option_none=" .
-						__('All Parts of Speech','sil_dictionary') .
-						"&show_count=1&selected=" . $_GET['tax'] .
-						"&orderby=name&echo=1&name=tax&taxonomy=sil_parts_of_speech");
-				}
 				?>
 			</div>
 		</form>

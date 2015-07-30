@@ -556,12 +556,11 @@ textarea {
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"] {	
 	text-align: center;
 	text-transform: uppercase;
 	padding: 13px 35px 13px 35px;
-	border-radius: 4px;
-	margin: 10px;
+	border-radius: 30px;
 	border: none;
 	background-color: #e5c507;
 	box-shadow: none;
@@ -617,7 +616,7 @@ input[type="search"],
 textarea {
 	color: #800080;
 	border: 1px solid rgba(0, 0, 0, 0.1);
-	border-radius: 0;
+	border-radius: 30px;
 }
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -632,7 +631,11 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-	padding: 3px;
+	padding: 10px;
+	padding-left: 20px;
+}
+input[type="text"]{
+	width:80%;
 }
 textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
@@ -1080,6 +1083,7 @@ a:active {
 }
 .entry-meta{
 	margin-top: 10px;
+	display: none;
 }
  /*---------------------------------------
  **   10.2 Asides                   -----
@@ -3055,6 +3059,7 @@ article .posted-on a:hover{
 .listpost-content-wrap-full .entry-footer > span,
 .listpost-content-wrap .entry-footer > span {
 	padding-right: 15px;
+	display: none;
 }
 .listpost-content-wrap .entry-content p {
 	min-height: 90px;
@@ -4301,7 +4306,6 @@ article .posted-on a:hover{
 	.large-container {
 		width: 100%;
 	}
-
 }
 @media (max-width: 767px) {
 	.woocommerce-page .upsells.products ul li.product,
@@ -4333,6 +4337,19 @@ article .posted-on a:hover{
 	}
 	.menu-align-center .responsive-logo > a {
 		float: left;
+	}
+}
+
+@media (max-width: 730px) {	
+	input[type="submit"] {	
+		width:100%;
+	}
+	input[type="text"]{
+		width:100%;
+		margin-top: 10px;
+	}
+	.searchbutton{
+		margin-top: 10px;
 	}
 }
 @media (max-width: 600px) {
@@ -4975,3 +4992,8 @@ body.custom-background {
 }
 .senses>.sense + .sense:before { content: "  " }
 .xsensenumber:after { content: ") " }
+.searchbutton{
+	width: 5%;
+	background: url(images/search_icon.png) no-repeat center center;
+	text-indent: -99999999999px;
+}

@@ -14,7 +14,7 @@ get_header(); ?>
 
 
 
-	<div id="content" class="site-content">
+<div id="content" class="site-content">
 
 <div class="container">
 
@@ -27,14 +27,9 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 
-
 			<?php while ( have_posts() ) : the_post(); ?>
 
-
-
 				<?php get_template_part( 'content', 'page' ); ?>
-
-
 
 				<?php
 
