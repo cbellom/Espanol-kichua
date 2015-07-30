@@ -10,7 +10,7 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php _e( 'Nothing Found', 'zerif-lite' ); ?></h1>
+		<h1 class="page-title"><?php _e( 'No se encontró nada', 'zerif-lite' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -20,8 +20,8 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'zerif-lite' ); ?></p>
-			<?php get_search_form(); ?>
+			<p><?php _e( 'Lo sentimos, pero no se encontraron resultados. Por favor, inténtelo de nuevo con algunas palabras clave diferentes.', 'zerif-lite' ); ?></p>
+			<?php				echo "<p id=search-2 class=widget widget_search>";				if(function_exists('webonary_searchform')) { webonary_searchform(); }				echo "</p>";				//if(is_page() && is_active_sidebar('sidebar-pages')) : dynamic_sidebar('sidebar-pages');				if(is_active_sidebar('sidebar-pages')) : dynamic_sidebar('sidebar-pages');				//elseif(is_active_sidebar('sidebar-blog')) : dynamic_sidebar('sidebar-blog');				endif; 			?>
 
 		<?php else : ?>
 
