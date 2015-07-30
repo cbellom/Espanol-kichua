@@ -15,7 +15,7 @@
  
 
 get_header(); ?>
-
+<link rel="stylesheet" id="fasc-buttons-style-css" href="http://vivelabbogota.com/lengua_kichwa/wp-content/plugins/forget-about-shortcode-buttons/assets/css/button-styles.css?ver=1.1.0" type="text/css" media="all">
 <div class="clear"></div>
 
 </header> <!-- / END HOME SECTION  -->
@@ -84,7 +84,9 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-
+			
+<a class="fasc-button fasc-size-medium fasc-type-glossy fasc-rounded-medium fasc-ico-before dashicons-undo" style="background-color: #800080; color: #ffffff;" href="http://vivelabbogota.com/lengua_kichwa/tradicional/" data-fasc-style="background-color:#800080;color:#ffffff;">Volver al diccionario</a>
+<p/>
 
 		</main><!-- #main -->
 
