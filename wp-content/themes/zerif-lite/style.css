@@ -634,9 +634,6 @@ input[type="search"] {
 	padding: 10px;
 	padding-left: 20px;
 }
-input[type="text"]{
-	width:80%;
-}
 textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
 	padding-left: 3px;
@@ -4992,8 +4989,21 @@ body.custom-background {
 }
 .senses>.sense + .sense:before { content: "  " }
 .xsensenumber:after { content: ") " }
+
+
+input[type="text"]{
+	width:80%;
+}
+
+.widget-area input[type="text"]{
+	width:100%;
+}
 .searchbutton{
 	width: 5%;
 	background: url(images/search_icon.png) no-repeat center center;
 	text-indent: -99999999999px;
+}
+.widget-area .searchbutton{
+	margin-top:10px;
+	width: 100%;
 }
