@@ -528,7 +528,7 @@ function vernacularalphabet_func( $atts )
 	}
 		
 	$display .= "<div align=center><br>";
-	$display .= displayPagenumbers($chosenLetter, $totalEntries, 25, $languagecode);
+	$display .= displayPagenumbers($chosenLetter, $totalEntries, 50, $languagecode);
 	$display .= "</div><br>";
 	
  	wp_reset_query();
