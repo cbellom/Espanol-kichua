@@ -5,7 +5,7 @@ function categories_func( $atts )
 	
 	$display = "";
 	
-	$postsperpage = 25;
+	$postsperpage = 100;
 	
 	$qTransLang = "en";
 	
@@ -406,7 +406,7 @@ function reversalindex($display, $chosenLetter, $langcode)
 	}
 
 	$display .=  "<div style=clear:both></div>";
-	$display .= displayPagenumbers($chosenLetter, $totalEntries, 50, $languagecode);
+	$display .= displayPagenumbers($chosenLetter, $totalEntries, 100, $languagecode);
 
 	$display .=  "</div><br>";
 
@@ -468,7 +468,7 @@ function vernacularalphabet_func( $atts )
 	
 	$display .= "<div id=searchresults>";
     
-	$arrPosts = query_posts("s=a&letter=" . $chosenLetter . "&noletters=" . $noLetters . "&langcode=" . $languagecode . "&posts_per_page=25&paged=" . $_GET['pagenr']);
+	$arrPosts = query_posts("s=a&letter=" . $chosenLetter . "&noletters=" . $noLetters . "&langcode=" . $languagecode . "&posts_per_page=100&paged=" . $_GET['pagenr']);
 	
 	if(count($arrPosts) == 0)
 	{
@@ -528,7 +528,7 @@ function vernacularalphabet_func( $atts )
 	}
 		
 	$display .= "<div align=center><br>";
-	$display .= displayPagenumbers($chosenLetter, $totalEntries, 50, $languagecode);
+	$display .= displayPagenumbers($chosenLetter, $totalEntries, 100, $languagecode);
 	$display .= "</div><br>";
 	
  	wp_reset_query();
